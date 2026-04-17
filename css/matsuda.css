@@ -1,0 +1,353 @@
+@charset "utf-8";
+@import url(/cafe/css/common.css);
+/* 
+個別で設定するCSS
+必ずidを入れて設定する
+*/
+
+/* * {
+    outline: 1px solid magenta;
+} */
+
+/* 文書を表すツリーのルート要素 */
+/* --はグローバルのCSS変数を宣言。カラーコードを打たなくても文字で色を指定できます*/
+/* 文書を表すツリーのルート要素 */
+/* --はグローバルのCSS変数を宣言。カラーコードを打たなくても文字で色を指定できます*/
+:root {
+    --base-width: 375;
+    --sec1-width: 331;
+    --sec3-width: 335;
+    --gray: #dfd5da;
+    --brown: #723f12;
+    --lightbrown: #B38B68;
+    --whitepink: #FFF6FC;
+    --pink: #FFBCE6;
+    --pink2: #FFD7F0;
+    --white: #fffcfe;
+    --100vw: 100vw;
+}
+
+
+/* スマホ */
+
+
+
+#left-contents {
+    display: none;
+}
+
+
+
+#concept .heartFrame img {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#concept .heartFrame {
+    position: relative;
+    width: fit-content;
+    margin: 30px auto;
+}
+
+#concept .heartFrame p {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.8;
+    text-align: center;
+    width: 305px;
+}
+
+
+
+
+#footer {
+    background-color: #FACFEB;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+#home .firstview {
+    padding-top: 60px;
+    width: 85%;
+    display: block;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+/* フッターのアイコン */
+.sns-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.sns-btn li {
+    width: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* map */
+iframe {
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.info {
+    background-color: var(--white);
+    width: calc(100% - 60px);
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 1px 0px .4px var(--gray);
+    padding-top: 10px;
+    line-height: 35px;
+    text-align: center;
+}
+
+
+
+
+#left-contents {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: calc((100vw - 1200px) / 2 / 2);
+    transform: translateY(-50%);
+    z-index: 1;
+
+}
+
+/* うさぎアニメーション */
+.rabbit {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Animation */
+.rabbit {
+    animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floating-y {
+    0% {
+        transform: translateY(-7%);
+    }
+
+    100% {
+        transform: translateY(5%);
+    }
+}
+
+
+.sns-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.sns-icon li {
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* left contents　削除 */
+@media screen and (max-width: 1200px) {
+    #left-contents {
+        display: none;
+    }
+}
+
+/* スライダー */
+
+#concept .concept-wrapper {
+    width: 91%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 365 / 290;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+}
+
+#concept .slide-track {
+    display: flex;
+    /* 画像を横一列に強制する */
+    width: 500%;
+    transition: transform 0.5s ease-in-out;
+}
+
+#concept .slideimg {
+    width: 20%;
+    flex-shrink: 0;
+    /* 画像が圧縮されないように固定 */
+    object-fit: cover;
+    margin: 0;
+    display: block;
+}
+
+
+/* ボタンのデザイン */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 252, 254, 0.8);
+    color: #F9ABE6;
+    border: none;
+    border-radius: 70%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+#information .map-area iframe {
+    width: calc(100% - 120px);
+    aspect-ratio: 1 / 1;
+    display: block;
+    margin: 0 auto;
+}
+
+#information .info-title {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    /* 垂直中心 */
+    justify-content: center;
+    /* 水平中心 */
+    width: 200px;
+    margin: 0 auto;
+}
+
+#information .info-title:before,
+#information .info-title:after {
+    border-top: 2px dotted #dca8b7;
+    content: "";
+    flex-grow: 1;
+}
+
+#information .info-title:before {
+    margin-right: 1em;
+    /* 文字の右隣 */
+}
+
+#information .info-title:after {
+    margin-left: 1em;
+    /* 文字の左隣 */
+}
+
+
+/* スマホTOPボタン */
+@media screen and (max-width: 767px) {
+    .top-button {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 80px;
+        height: 80px;
+
+        /* 画像を指定する部分 */
+        background-image: url(../images/rabbit.png);
+        background-size: 80px 80px;
+        background-repeat: no-repeat;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+
+
+
+        /* ふわっと出すための設定（前回と同じ） */
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+
+        .top-button.is-show {
+            opacity: 1;
+            /* 100%表示 */
+            visibility: visible;
+            /* クリックできるようにする */
+        }
+
+        animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
+    }
+
+    .top-button.is-show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* うさぎアニメーション */
+
+
+    @keyframes floating-y {
+        0% {
+            transform: translateY(-7%);
+        }
+
+        100% {
+            transform: translateY(5%);
+        }
+    }
+
+}
+
+/* インフォ飛ぶ */
+a[href^="tel:"] {
+    color: #e690bc;
+    text-decoration: underline;
+}
+
+a[href*="https://maps.app.goo.gl/8zoGPzq5Mz4VTza38"] {
+    color: #e690bc;
+    /* サイトメインカラー */
+    text-decoration: underline;
+}
+
+
+
+
+/* 768px以上 */
+
+@media screen and (min-width:768px) {
+    #home .firstview {
+        padding-top: 40px;
+        width: 100%;
+        display: block;
+        margin: 0 auto 70px;
+    }
+
+    #information .info {
+        width: 370px;
+        margin: 30px auto;
+    }
+
+    #information .map-area iframe {
+        width: 350px;
+        height: 350px;
+    }
+}

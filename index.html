@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="職業訓練校のチーム制作課題として制作した、推し活が気軽に楽しめるをコンセプトにした架空のカフェのランディングページです。モバイルファーストを意識し、スマートフォンでも見やすく使いやすいデザインとレイアウトを心がけました。">
+    <!-- ファビコン -->
+    <link rel="icon" type="image/png" href="./images/rabbit.png">
+    <title>cafe Ruban</title>
+    <!-- Googleフォント 日本語 kaisei Decol -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+    <!-- 上記フォントのフォントファミリ　font-family: "Kaisei Decol", serif; -->
+    <!-- Googleフォント 英語 Pacifico -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- 上記フォントファミリ  font-family: "Pacifico", cursive;-->
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- スタイルCSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- 屋根 -->
+    <div id="pc-pattern" class="pc"></div>
+    <div id="pc-bg">
+        <div class="inner"></div>
+    </div>
+
+    <!-- 左側のうさぎたち -->
+    <div id="left-contents">
+        <div class="rabbit">
+            <img src="./images/rabbit.png" alt="うさぎのイラスト">
+        </div>
+        <ul class="sns-icon">
+            <li><a href="https://www.instagram.com/sozosha_hiroshima/" target="_blank"><img src="./images/insta.png"
+                        alt="インスタグラムのアイコン"></a>
+            </li>
+            <li><a href="#"><img src="./images/twitter.png" alt="Xのアイコン"></a>
+            </li>
+        </ul>
+    </div>
+    <!-- 右側のナビメニュー -->
+    <div id="navi">
+        <div class="nav-wrapper">
+            <img src="./images/navi.png" alt="ナビゲーションメニュー">
+
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reserve">Reserve</a></li>
+                <li><a href="#information">Information</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ハンバーガーメニュー -->
+    <header>
+        <div id="hamburger-menu">
+
+            <!-- ボタン -->
+
+            <button class="hamburger-btn">
+                <div class="menu-cake">
+                    <div class="top-strawberry"></div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <img src="./images/ham-ribbon.svg" alt="" class="ribbon">
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- スマホの中 -->
+        <div id="main-content">
+            <div class="main-inner">
+
+                <!-- サイトトップ -->
+                <section id="home">
+                    <div class="firstview">
+                        <img src="./images/logo.png" alt="ロゴ" class="logo">
+                        <img src="./images/main.png" alt="外装">
+                    </div>
+                </section>
+
+                <!-- コンセプト -->
+                <section id="concept">
+                    <div class="section-title">
+                        <img src="./images/frame.webp" alt="フレーム">
+                        <h2>Concept</h2>
+                    </div>
+                    <div class="concept-wrapper">
+                        <div class="slide-track" id="slideTrack">
+                            <img src="./images/concept.png" alt="ピンク" class="slideimg">
+
+                            <img src="./images/concept2.png" alt="青" class="slideimg">
+
+                            <img src="./images/concept3.png" alt="紫と黒" class="slideimg">
+
+                            <img src="./images/concept4.png" alt="黄" class="slideimg">
+
+                            <img src="./images/concept.png" alt="ピンク" class="slideimg">
+                        </div>
+                        <button class="prev-btn" onclick="prevSlide()">＜</button>
+                        <button class="next-btn" onclick="nextSlide()">＞</button>
+                    </div>
+
+
+                    <div class="heartFrame">
+                        <img src="./images/heartFrame.webp" alt="ハートフレーム">
+                        <p>お祝いの日も、なんでもない日も。<br>
+                            リボンのように“好き”をぎゅっと結んで。<br>
+                            選べるケーキと自由なメッセージで、<br>
+                            あなただけの特別なひとときを。<br>
+                            とびきり甘くてときめく、<br>
+                            推し活カフェです。</p>
+                    </div>
+                </section>
+
+
+                <!-- メニュー -->
+                <section id="menu">
+
+
+                    <div class="menu-box">
+
+                        <div class="menu-box_top">
+                            <h2>menu</h2>
+                            <img src="./images/menutop.svg" alt="" class="menutop">
+                        </div>
+                        <div class="menu-wrapper">
+
+                            <!-- メニュー１ -->
+                            <div class="menu-container">
+                                <img src="./images/plate.png" alt="メニュー写真">
+                                <div class="menu-text">
+                                    <p><span class="marker">ケーキプレート</span></p>
+                                    <p><span>¥1,500</span></p>
+                                    <p>お好きなメッセージをお入れできます。ショーケースからお好きなケーキをお選びいただき、
+                                        あなただけのプレートをお作りします。<br>
+                                        +300円〜で、イラストやカラーの追加も可能です。<br>
+                                        ケーキは単品でのご注文も可能です。</p>
+                                </div>
+                            </div>
+
+                            <!-- メニュー２ -->
+                            <div class="menu-container">
+                                <img src="./images/sand.png" alt="メニュー写真">
+
+                                <div class="menu-text">
+                                    <p><span class="marker">サンドイッチ</span></p>
+                                    <p><span>¥800</span></p>
+                                    <p>軽食のご用意もございます。
+                                        プレートのご注文がなくても、 カフェ利用だけでもお楽しみいただけます。<br>
+                                        甘いスイーツと一緒にいかがでしょうか？</p>
+                                </div>
+
+                            </div>
+
+                            <!-- メニュー３ -->
+                            <div class="menu-container">
+                                <img src="./images/colordrink.png" alt="メニュー写真">
+
+                                <div class="menu-text">
+                                    <p><span class="marker">カラードリンク</span></p>
+                                    <p><span>¥600</span></p>
+                                    <p>ドリンクとリボンのカラーをお選びいただけます。お好きな“推しカラー”でお楽しみください。<br>
+                                        基本は炭酸ですが、変更も可能です。</p>
+                                </div>
+
+                            </div>
+
+                            <!-- メニュー4 -->
+                            <div class="menu-container">
+                                <img src="./images/latteart.png" alt="メニュー写真">
+
+                                <div class="menu-text">
+                                    <p><span class="marker">ラテアート</span></p>
+                                    <p><span>¥800</span></p>
+                                    <p>簡単なイラストや文字をのせた、ときめく一杯をお作りします。<br>
+                                        ラテの味もお選びいただけるので、 お好みに合わせてお楽しみください。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- 予約セクション -->
+                <section id="reserve">
+
+                    <!-- 上のもこもこ -->
+                    <div class="scallop-top"></div>
+                    <div class="reserve-wrapper">
+                        <div class="section-title">
+                            <h2>Reserve</h2><br><br>
+
+                        </div>
+                        <img src="./images/calendar.png" alt="カレンダー">
+
+
+                        <div class="form">
+                            <form action="" method="post">
+
+                                <div class="form-head">
+                                    <button type="button" class="accordion-btn">
+                                        <img src="./images/reserve-btn.png" alt="ご予約はこちら" class="btn-default">
+                                        <img src="./images/reserve-btn02.png" alt="ご予約はこちら" class="btn-hover">
+                                    </button>
+                                </div>
+
+                                <div class="form-wrapper">
+
+                                    <div class="form-item">
+                                        <p class="Form-Item-Label">代表者様のお名前</p>
+                                        <input type="text" name="name" placeholder="例）桜井 桃" required />
+                                    </div>
+
+                                    <div class="form-item">
+                                        <p class="Form-Item-Label">メールアドレス</p>
+                                        <input type="email" name="mail" placeholder="例）example@gmail.com" required />
+
+                                    </div>
+
+                                    <div class="form-item">
+                                        <p class="Form-Item-Label">電話番号</p>
+                                        <input type="tel" name="tel" placeholder="例）000-0000-0000" required />
+
+                                    </div>
+
+                                    <div class="form-item">
+                                        <p class="Form-Item-Label">人数</p>
+                                        <input type="text" name="Number of people" placeholder="例）2人" required />
+                                    </div>
+
+                                    <div class="form-item">
+                                        <p class="Form-Item-Label">予約日時</p>
+                                        <input type="datetime-local" name="datetime" required />
+                                    </div>
+
+                                    <div class="form-item">
+                                        <p class="Form-Item-Label">ご要望</p>
+                                        <textarea name="request" placeholder="例）プレートの文字は「⚪︎⚪︎誕生祭2026」でお願いします。桃アレルギーです。
+                                    "></textarea>
+                                    </div>
+
+                                    <input type="submit" value="送信" name="submit" class="btn-submit" />
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <!-- 下のもこもこ -->
+                    <div class="scallop-bottom"></div>
+
+                </section>
+
+
+
+                <!-- インフォメーションセクション -->
+                <section id="information">
+                    <div class="section-title">
+                        <img src="./images/frame.webp" alt="フレーム">
+                        <h2>Information</h2>
+                    </div>
+
+
+
+                    <!-- 地図 -->
+                    <div class="map-area"><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3292.3188475785373!2d132.4689004!3d34.3932408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa3930033bc45%3A0xff5c8040b1338c8d!2z5Ym16YCg56S-44Oq44Kr44Os44Oz44OI44K544Kv44O844Or5bqD5bO25qCh!5e0!3m2!1sja!2sjp!4v1775021892472!5m2!1sja!2sjp"
+                            style="border:0;filter: saturate(70%);" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+                    <style>
+                        iframe {
+                            pointer-events: auto !important;
+                            touch-action: auto !important;
+                        }
+                    </style>
+
+                    <div class="info">
+
+
+                        <h3 class="shop-title">
+                            <span class="icon left"></span>
+                            cafe Ruban
+                            <span class="icon right"></span>
+                        </h3>
+
+
+                        <p class="info-title">ACCESS</p>
+                        <a href="https://maps.app.goo.gl/8zoGPzq5Mz4VTza38" target="_blank">〒730-0015
+                            広島県広島市中区橋本町9-7</a><br>
+                        <p>広島電鉄｢銀山町｣電停より徒歩3分</p>
+                        <p>各社路線バス｢稲荷町｣バス停より徒歩1分</p>
+                        <p class="info-title">TEL</p>
+                        <a href="tel:070-0000-0000">070-0000-0000</a>
+                        <p class="info-title">OPEN</p>
+                        <p>11:00 - 20:00 (L.O.19:30)</p>
+                        <p class="info-title">CLOSED</p>
+                        <p>Thursday(木曜日)</p>
+                        <p class="info-title">PAYMENT</p>
+                        <p>現金・クレジットカード・交通系IC・PayPay</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer id="footer">
+        <ul class="sns-btn">
+            <li><a href="https://www.instagram.com/sozosha_hiroshima/" target="_blank"><img src="./images/insta.png"
+                        alt="インスタグラムのアイコン"></a>
+            </li>
+            <li><a href="#"><img src="./images/twitter.png" alt="Xのアイコン"></a>
+            </li>
+        </ul>
+        <p>&copy; cafe Ruban</p>
+    </footer>
+
+
+    <!-- コンセプト -->
+    <script>
+        let currentIndex = 0;
+        const track = document.getElementById('slideTrack');
+        const totalSlides = 4; // 本物の枚数
+        let isMoving = false; // 連打防止用
+
+        function updateSlide(animate = true) {
+            if (!animate) {
+                track.style.transition = 'none'; // アニメーションをオフ
+            } else {
+                track.style.transition = 'transform 0.5s ease-in-out'; // アニメーションをオン
+            }
+            const slideWidth = track.children[0].clientWidth;
+            const offset = currentIndex * -slideWidth;
+            track.style.transform = `translateX(${offset}px)`;
+        }
+
+        function nextSlide() {
+            if (isMoving) return;
+            isMoving = true;
+
+            currentIndex++;
+            updateSlide(true);
+
+            // 5枚目（1枚目のコピー）に来た時の処理
+            if (currentIndex === totalSlides) {
+                setTimeout(() => {
+                    currentIndex = 0; // 内部的に1枚目に戻す
+                    updateSlide(false); // アニメーションなしでワープ
+                    isMoving = false;
+                }, 500); // 0.5秒（アニメーション時間）待ってから実行
+            } else {
+                setTimeout(() => { isMoving = false; }, 500);
+            }
+        }
+
+        function prevSlide() {
+            if (isMoving) return;
+            isMoving = true;
+
+            if (currentIndex === 0) {
+                // 1枚目から戻る時は、まずアニメーションなしで5枚目にワープ
+                currentIndex = totalSlides;
+                updateSlide(false);
+
+                // その直後に、アニメーションありで4枚目に戻る
+                setTimeout(() => {
+                    currentIndex = totalSlides - 1;
+                    updateSlide(true);
+                    setTimeout(() => { isMoving = false; }, 500);
+                }, 20);
+            } else {
+                currentIndex--;
+                updateSlide(true);
+                setTimeout(() => { isMoving = false; }, 500);
+            }
+        }
+    </script>
+    <!-- スマホのTOPボタン -->
+    <a href="#" id="page-top" class="top-button">
+        <div class="icon-area"></div>
+
+    </a>
+    <script>
+        const topButton = document.getElementById('page-top');
+
+        window.addEventListener('scroll', () => {
+            // 300px スクロールしたら表示、それ以外は非表示
+            if (window.scrollY > 850) {
+                topButton.classList.add('is-show');
+            } else {
+                topButton.classList.remove('is-show');
+            }
+        });
+
+        // ボタンをクリックした時に「スルスルッ」と戻る設定（JSでも補強できます）
+        topButton.addEventListener('click', (e) => {
+            e.preventDefault(); // 本来の「#」の動きをキャンセル
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // スムーズにスクロール
+            });
+        });
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/reserve.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/resize.js"></script>
+</body>
+
+</html>
